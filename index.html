@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notaría Retiro Madrid — Alfonso XII 4 — Notaría de Confianza en Madrid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --char:#252525;
+  --ivory:#F8F5F0;
+  --sienna:#9B6B3A;
+  --mid-sienna:#B8834A;
+  --off-white:#FDFCFA;
+  --stone:#7A7A72;
+  --border:#DDD8D0;
+  --light-bg:#F2EDE7;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Lato',sans-serif;color:var(--char);background:var(--off-white);line-height:1.6}
+
+/* NAV */
+nav{
+  position:fixed;top:0;width:100%;z-index:100;
+  background:var(--char);
+  padding:0 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;
+  height:68px;
+}
+.nav-brand{
+  display:flex;align-items:center;gap:1rem;
+}
+.nav-logo-mark{
+  width:36px;height:36px;
+  border:1px solid var(--sienna);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.nav-logo-mark span{
+  font-family:'Cormorant Garamond',serif;
+  color:var(--sienna);font-size:1.1rem;font-weight:600;
+  letter-spacing:-0.02em;
+}
+.nav-name{
+  font-family:'Cormorant Garamond',serif;
+  color:#fff;font-size:1.05rem;font-weight:600;
+  letter-spacing:0.01em;line-height:1.2;
+}
+.nav-name small{display:block;font-family:'Lato',sans-serif;font-weight:300;font-size:0.68rem;color:rgba(255,255,255,0.45);letter-spacing:0.1em;text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;transition:color .2s}
+.nav-links a:hover{color:var(--sienna)}
+.nav-phone{
+  color:rgba(255,255,255,0.85);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;font-weight:600;
+  text-decoration:none;
+  border-left:1px solid rgba(255,255,255,0.15);
+  padding-left:1.5rem;
+  margin-left:0.5rem;
+  transition:color .2s;
+}
+.nav-phone:hover{color:var(--sienna)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:24px;height:2px;background:#fff;display:block}
+@media(max-width:900px){
+  .nav-links,.nav-phone{display:none}
+  .hamburger{display:flex}
+}
+
+/* HERO - Editorial horizontal split */
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-rows:auto 1fr;
+  padding-top:68px;
+  background:var(--ivory);
+}
+.hero-band{
+  background:var(--sienna);
+  height:4px;
+}
+.hero-body{
+  display:grid;
+  grid-template-columns:55% 45%;
+  min-height:calc(100vh - 68px);
+}
+.hero-main{
+  background:var(--char);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:4rem 4rem 5rem;
+  position:relative;overflow:hidden;
+}
+/* Large background number - editorial style */
+.hero-main::before{
+  content:'N';
+  position:absolute;top:-2rem;left:-1.5rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:22vw;font-weight:700;line-height:1;
+  color:rgba(255,255,255,0.03);
+  pointer-events:none;
+  user-select:none;
+}
+.hero-kicker{
+  font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--sienna);font-weight:700;margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:0.8rem;
+}
+.hero-kicker::before{content:'';width:40px;height:1px;background:var(--sienna)}
+.hero-main h1{
+  font-family:'Cormorant Garamond',serif;
+  color:#fff;
+  font-size:clamp(2.4rem,4.5vw,4rem);
+  line-height:1.15;
+  font-weight:300;
+  letter-spacing:-0.01em;
+  margin-bottom:1.8rem;
+}
+.hero-main h1 strong{font-weight:700;display:block}
+.hero-divider{
+  width:60px;height:1px;
+  background:var(--sienna);
+  margin-bottom:1.8rem;
+}
+.hero-sub{
+  color:rgba(255,255,255,0.55);
+  font-size:1rem;line-height:1.75;
+  max-width:400px;margin-bottom:2.5rem;
+  font-weight:300;
+}
+.hero-cta-wrap{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-hero{
+  background:var(--sienna);color:#fff;
+  padding:0.9rem 2.2rem;font-weight:700;
+  text-decoration:none;font-size:0.78rem;
+  letter-spacing:0.1em;text-transform:uppercase;
+  transition:background .2s;display:inline-block;
+}
+.btn-hero:hover{background:var(--mid-sienna)}
+.btn-hero-ghost{
+  color:rgba(255,255,255,0.6);
+  font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;
+  text-decoration:none;font-weight:700;
+  border-bottom:1px solid rgba(255,255,255,0.25);
+  padding-bottom:2px;transition:color .2s,border-color .2s;
+}
+.btn-hero-ghost:hover{color:#fff;border-color:#fff}
+
+.hero-panel{
+  background:var(--ivory);
+  display:flex;flex-direction:column;
+  padding:0;
+}
+.hero-panel-top{
+  flex:1;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:3rem 3rem 2rem;
+  border-bottom:1px solid var(--border);
+}
+.contact-highlight{
+  margin-bottom:2rem;
+}
+.contact-highlight .label{
+  font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--stone);font-weight:700;margin-bottom:0.5rem;
+}
+.contact-highlight .value{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;font-weight:600;color:var(--char);
+  letter-spacing:0.01em;
+}
+.contact-highlight .value a{color:var(--char);text-decoration:none;transition:color .2s}
+.contact-highlight .value a:hover{color:var(--sienna)}
+.panel-address{
+  background:var(--light-bg);
+  border-left:3px solid var(--sienna);
+  padding:1.2rem 1.5rem;
+  margin-top:auto;
+}
+.panel-address p{font-size:0.88rem;color:var(--stone);line-height:1.6}
+.panel-address strong{color:var(--char);font-weight:700}
+.hero-panel-horario{
+  padding:2rem 3rem;
+  background:#fff;
+}
+.horario-title{
+  font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--stone);font-weight:700;margin-bottom:1rem;
+}
+.horario-row{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0;border-bottom:1px solid var(--border);font-size:0.9rem}
+.horario-row:last-child{border-bottom:none}
+.horario-row .day{color:var(--char);font-weight:400}
+.horario-row .time{color:var(--sienna);font-weight:700;font-size:0.85rem}
+
+@media(max-width:900px){
+  .hero-body{grid-template-columns:1fr;grid-template-rows:auto auto}
+  .hero-main{padding:3rem 1.5rem 4rem;min-height:70vh}
+  .hero-panel-top{padding:2rem 1.5rem}
+  .hero-panel-horario{padding:1.5rem}
+}
+
+/* MARQUEE */
+.marquee-wrap{
+  background:var(--sienna);
+  overflow:hidden;padding:0.8rem 0;
+  white-space:nowrap;
+}
+.marquee-track{
+  display:inline-flex;gap:3rem;
+  animation:marquee 20s linear infinite;
+}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee-item{
+  font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.9);font-weight:700;
+  display:inline-flex;align-items:center;gap:0.8rem;
+}
+.marquee-item::before{content:'◆';font-size:0.45rem;color:rgba(255,255,255,0.5)}
+
+/* SERVICIOS */
+.servicios{background:#fff;padding:6rem 2.5rem}
+.container{max-width:1200px;margin:0 auto}
+.section-label{
+  font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--sienna);font-weight:700;
+  display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;
+}
+.section-label::before{content:'';width:32px;height:1px;background:var(--sienna)}
+.section-h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.5vw,3rem);
+  color:var(--char);font-weight:300;line-height:1.2;
+  margin-bottom:0.5rem;
+}
+.section-h2 strong{font-weight:700}
+.section-intro{color:var(--stone);font-size:1rem;max-width:520px;line-height:1.75;margin:1.5rem 0 3.5rem}
+.servicios-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);
+}
+.servicio-item{
+  background:#fff;
+  padding:2.5rem 2rem;
+  transition:background .2s;
+  position:relative;
+}
+.servicio-item:hover{background:var(--ivory)}
+.servicio-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;font-weight:700;color:var(--border);
+  line-height:1;margin-bottom:1rem;
+}
+.servicio-item h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;color:var(--char);font-weight:600;
+  margin-bottom:0.7rem;line-height:1.3;
+}
+.servicio-item p{font-size:0.88rem;color:var(--stone);line-height:1.65}
+.servicio-item .icon{
+  position:absolute;top:2rem;right:2rem;
+  color:var(--sienna);opacity:0.35;
+}
+
+/* PROCESO */
+.proceso{
+  background:var(--char);
+  padding:6rem 2.5rem;
+}
+.proceso .section-label,.proceso .section-h2{color:#fff}
+.proceso .section-label::before{background:var(--sienna)}
+.proceso .section-intro{color:rgba(255,255,255,0.55)}
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:0;
+  margin-top:3rem;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.timeline-step{
+  padding:2.5rem 2rem 2.5rem 0;
+  border-right:1px solid rgba(255,255,255,0.1);
+}
+.timeline-step:last-child{border-right:none}
+.step-dot{
+  width:10px;height:10px;background:var(--sienna);
+  border-radius:50%;margin-bottom:1.5rem;
+}
+.step-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:0.75rem;letter-spacing:0.1em;color:rgba(255,255,255,0.25);
+  margin-bottom:1rem;font-weight:300;
+}
+.timeline-step h3{
+  font-family:'Cormorant Garamond',serif;
+  color:#fff;font-size:1.15rem;font-weight:600;margin-bottom:0.6rem;
+}
+.timeline-step p{font-size:0.85rem;color:rgba(255,255,255,0.45);line-height:1.65}
+
+@media(max-width:768px){
+  .timeline{grid-template-columns:1fr;border-top:none}
+  .timeline-step{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);padding:2rem 0}
+  .timeline-step:last-child{border-bottom:none}
+}
+
+/* TRUST */
+.trust{background:var(--ivory);padding:6rem 2.5rem}
+.trust-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+}
+.trust-text .section-intro{max-width:420px}
+.trust-metrics{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--border);border:1px solid var(--border);
+}
+.metric{
+  background:var(--off-white);padding:2.5rem 2rem;
+  transition:background .2s;
+}
+.metric:hover{background:#fff}
+.metric-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem;font-weight:700;color:var(--sienna);
+  line-height:1;margin-bottom:0.3rem;
+}
+.metric-label{font-size:0.78rem;color:var(--stone);letter-spacing:0.05em;text-transform:uppercase;font-weight:700}
+
+@media(max-width:768px){
+  .trust-inner{grid-template-columns:1fr}
+  .trust-metrics{max-width:400px}
+}
+
+/* CITA */
+.cita{background:#fff;padding:6rem 2.5rem}
+.cita-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;
+  align-items:start;
+}
+.cita-info .section-intro{max-width:380px}
+.info-block{margin-bottom:1.5rem}
+.info-block .ib-label{
+  font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--stone);font-weight:700;margin-bottom:0.3rem;
+}
+.info-block .ib-value{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;color:var(--char);font-weight:600;
+}
+.info-block .ib-value a{color:var(--char);text-decoration:none;transition:color .2s}
+.info-block .ib-value a:hover{color:var(--sienna)}
+
+.cita-form{
+  background:var(--ivory);
+  padding:3rem;
+}
+.cita-form h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;font-weight:600;color:var(--char);
+  margin-bottom:0.5rem;
+}
+.cita-form .form-sub{color:var(--stone);font-size:0.88rem;margin-bottom:2rem}
+.f-group{margin-bottom:1.2rem}
+.f-group label{
+  display:block;font-size:0.7rem;text-transform:uppercase;
+  letter-spacing:0.1em;font-weight:700;color:var(--stone);margin-bottom:0.4rem;
+}
+.f-group input,.f-group select,.f-group textarea{
+  width:100%;border:none;border-bottom:1px solid var(--border);
+  padding:0.7rem 0;background:transparent;
+  font-family:'Lato',sans-serif;font-size:0.95rem;color:var(--char);
+  outline:none;transition:border-color .2s;
+}
+.f-group input:focus,.f-group select:focus,.f-group textarea:focus{border-color:var(--sienna)}
+.f-group textarea{resize:vertical;min-height:90px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.btn-form{
+  background:var(--char);color:#fff;
+  border:none;padding:1rem 2.5rem;
+  font-family:'Lato',sans-serif;font-size:0.78rem;
+  font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  cursor:pointer;transition:background .2s;margin-top:0.5rem;
+}
+.btn-form:hover{background:var(--sienna)}
+.form-legal{font-size:0.75rem;color:var(--stone);margin-top:1rem;line-height:1.5}
+
+@media(max-width:768px){
+  .cita-inner{grid-template-columns:1fr}
+  .cita-form{padding:2rem 1.5rem}
+  .f-row{grid-template-columns:1fr}
+}
+
+/* FOOTER */
+footer{
+  background:var(--char);padding:3rem 2.5rem;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto 1fr;gap:2rem;align-items:center;
+}
+.footer-left{color:rgba(255,255,255,0.35);font-size:0.8rem}
+.footer-center{text-align:center}
+.footer-brand{
+  font-family:'Cormorant Garamond',serif;
+  color:#fff;font-size:1.2rem;font-weight:600;
+}
+.footer-brand small{display:block;font-family:'Lato',sans-serif;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:0.2rem}
+.footer-sienna{display:block;width:40px;height:1px;background:var(--sienna);margin:0.8rem auto}
+.footer-right{text-align:right}
+.footer-links{display:flex;gap:1.5rem;justify-content:flex-end;flex-wrap:wrap}
+.footer-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:0.78rem;transition:color .2s}
+.footer-links a:hover{color:var(--sienna)}
+
+@media(max-width:768px){
+  .footer-inner{grid-template-columns:1fr;text-align:center;gap:1.5rem}
+  .footer-right,.footer-links{text-align:center;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo-mark"><span>NR</span></div>
+    <div class="nav-name">
+      Notaría Retiro
+      <small>Alfonso XII, 4 · Madrid</small>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#trust">El Despacho</a></li>
+    <li><a href="#cita">Solicitar Cita</a></li>
+  </ul>
+  <a href="tel:+34915751678" class="nav-phone">915 75 16 78</a>
+  <button class="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="hero">
+  <div class="hero-band"></div>
+  <div class="hero-body">
+    <div class="hero-main">
+      <div class="hero-kicker">Barrio de Retiro · Madrid</div>
+      <h1><strong>Notaría en Madrid</strong> con presencia y tradición</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-sub">Seguridad jurídica en cada acto. Servicio notarial de confianza en el corazón de Madrid, con décadas de experiencia en escrituras, testamentos, herencias y documentos mercantiles.</p>
+      <div class="hero-cta-wrap">
+        <a href="#cita" class="btn-hero">Solicitar Cita</a>
+        <a href="tel:+34915751678" class="btn-hero-ghost">Llamar: 915 75 16 78</a>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <div class="hero-panel-top">
+        <div class="contact-highlight">
+          <div class="label">Teléfono directo</div>
+          <div class="value"><a href="tel:+34915751678">915 75 16 78</a></div>
+        </div>
+        <div class="contact-highlight">
+          <div class="label">Dirección</div>
+          <div class="value" style="font-size:1.2rem">Alfonso XII, 4<br>28014 Madrid</div>
+        </div>
+        <div class="panel-address">
+          <p><strong>Barrio de Retiro</strong> — A escasos metros del Parque del Retiro, en el distrito de Retiro de Madrid. Acceso fácil en metro y autobús.</p>
+        </div>
+      </div>
+      <div class="hero-panel-horario">
+        <div class="horario-title">Horario de atención</div>
+        <div class="horario-row">
+          <span class="day">Lunes — Jueves</span>
+          <span class="time">09:00 – 18:00</span>
+        </div>
+        <div class="horario-row">
+          <span class="day">Viernes</span>
+          <span class="time">09:00 – 15:00</span>
+        </div>
+        <div class="horario-row">
+          <span class="day">Sábados</span>
+          <span class="time">Cerrado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Escrituras de Compraventa</span>
+    <span class="marquee-item">Testamentos</span>
+    <span class="marquee-item">Herencias y Sucesiones</span>
+    <span class="marquee-item">Poderes Notariales</span>
+    <span class="marquee-item">Protocolización de Documentos</span>
+    <span class="marquee-item">Actas Notariales</span>
+    <span class="marquee-item">Escrituras de Compraventa</span>
+    <span class="marquee-item">Testamentos</span>
+    <span class="marquee-item">Herencias y Sucesiones</span>
+    <span class="marquee-item">Poderes Notariales</span>
+    <span class="marquee-item">Protocolización de Documentos</span>
+    <span class="marquee-item">Actas Notariales</span>
+  </div>
+</div>
+
+<section class="servicios" id="servicios">
+  <div class="container">
+    <div class="section-label">Servicios notariales</div>
+    <h2 class="section-h2">Actos que <strong>dan fe</strong></h2>
+    <p class="section-intro">Prestamos todo tipo de servicios notariales con la máxima diligencia y confidencialidad. La fe pública notarial es la garantía de sus actos jurídicos.</p>
+    <div class="servicios-grid">
+      <div class="servicio-item">
+        <div class="servicio-num">01</div>
+        <div class="icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Escrituras de Compraventa</h3>
+        <p>Protocolización de compraventas inmobiliarias, vivienda habitual, locales comerciales y suelo. Coordinación hipotecaria con entidades financieras.</p>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">02</div>
+        <div class="icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z"/></svg>
+        </div>
+        <h3>Testamentos</h3>
+        <p>Redacción y otorgamiento de testamentos abiertos, codicilios y declaraciones de voluntad anticipada. Asesoramiento en planificación sucesoria.</p>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">03</div>
+        <div class="icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+        </div>
+        <h3>Herencias y Sucesiones</h3>
+        <p>Declaraciones de herederos abintestato, aceptación y adjudicación de herencias, cuadernos particionales y liquidación del impuesto de sucesiones.</p>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">04</div>
+        <div class="icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Poderes Notariales</h3>
+        <p>Poderes generales y especiales, para pleitos, administrativos, bancarios, de representación y gestión de patrimonios.</p>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">05</div>
+        <div class="icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Derecho Mercantil</h3>
+        <p>Constitución de sociedades, modificaciones estatutarias, capitulaciones matrimoniales, actas de juntas y contratos mercantiles.</p>
+      </div>
+      <div class="servicio-item">
+        <div class="servicio-num">06</div>
+        <div class="icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Actas y Fe Pública</h3>
+        <p>Actas de presencia, de notoriedad, de manifestaciones, legalizaciones, apostillas y cualquier documento que requiera fe pública notarial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proceso" id="proceso">
+  <div class="container">
+    <div class="section-label" style="color:rgba(255,255,255,0.6)">
+      <span style="background:var(--sienna);content:''"></span>
+      Cómo trabajamos
+    </div>
+    <h2 class="section-h2">Del primer contacto<br>a la <strong>firma con plenas garantías</strong></h2>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="step-dot"></div>
+        <div class="step-n">Paso 01</div>
+        <h3>Consulta y orientación</h3>
+        <p>Nos explica su caso. Le informamos sobre el tipo de documento necesario, plazos y honorarios arancelarios sin compromisos.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-dot"></div>
+        <div class="step-n">Paso 02</div>
+        <h3>Preparación documental</h3>
+        <p>Indicamos la documentación requerida. Le ayudamos a reunirla y la revisamos previamente para evitar incidencias el día de la firma.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-dot"></div>
+        <div class="step-n">Paso 03</div>
+        <h3>Redacción de la escritura</h3>
+        <p>Redactamos el documento con rigor jurídico, asegurándonos de que refleja fielmente su voluntad y cumple toda la normativa aplicable.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-dot"></div>
+        <div class="step-n">Paso 04</div>
+        <h3>Firma con plenas garantías</h3>
+        <p>Le leemos y explicamos el documento. Firmamos ante Notario. El acto queda protocolizado y tiene plena eficacia jurídica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="trust">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-text">
+        <div class="section-label">El despacho</div>
+        <h2 class="section-h2">Notaría de <strong>confianza</strong><br>en el Barrio de Retiro</h2>
+        <p class="section-intro">Situada en la calle Alfonso XII, nuestra notaría ofrece un servicio personalizado y cercano con toda la solidez de la institución notarial española.</p>
+        <p class="section-intro" style="font-size:0.9rem;color:var(--stone)">Contamos con personal cualificado y actualización permanente en la normativa notarial, registral, fiscal y mercantil. Atendemos tanto a particulares como a empresas con la misma dedicación y profesionalidad.</p>
+      </div>
+      <div class="trust-metrics">
+        <div class="metric">
+          <div class="metric-num">+25</div>
+          <div class="metric-label">Años en ejercicio</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">+10K</div>
+          <div class="metric-label">Escrituras otorgadas</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">6</div>
+          <div class="metric-label">Tipos de servicios</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">100%</div>
+          <div class="metric-label">Fe pública garantizada</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cita" id="cita">
+  <div class="container">
+    <div class="cita-inner">
+      <div class="cita-info">
+        <div class="section-label">Contacto</div>
+        <h2 class="section-h2">Solicitar <strong>cita previa</strong></h2>
+        <p class="section-intro">Llámenos o rellene el formulario y le confirmamos disponibilidad en menos de 24 horas. Sin esperas innecesarias.</p>
+        <div class="info-block">
+          <div class="ib-label">Teléfono</div>
+          <div class="ib-value"><a href="tel:+34915751678">915 75 16 78</a></div>
+        </div>
+        <div class="info-block">
+          <div class="ib-label">Dirección</div>
+          <div class="ib-value" style="font-size:1rem;font-family:'Lato',sans-serif">C/ Alfonso XII, 4<br>28014 Madrid — Barrio de Retiro</div>
+        </div>
+        <div class="info-block">
+          <div class="ib-label">Web oficial</div>
+          <div class="ib-value" style="font-size:1rem;font-family:'Lato',sans-serif"><a href="https://www.notariaretiro.com" target="_blank" rel="noopener">notariaretiro.com</a></div>
+        </div>
+      </div>
+
+      <div class="cita-form">
+        <h3>Pedir cita previa</h3>
+        <p class="form-sub">Le contactaremos para confirmar día y hora.</p>
+        <form>
+          <div class="f-row">
+            <div class="f-group">
+              <label>Nombre</label>
+              <input type="text" placeholder="Su nombre">
+            </div>
+            <div class="f-group">
+              <label>Apellidos</label>
+              <input type="text" placeholder="Sus apellidos">
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label>Teléfono</label>
+              <input type="tel" placeholder="600 000 000">
+            </div>
+            <div class="f-group">
+              <label>Email</label>
+              <input type="email" placeholder="correo@ejemplo.com">
+            </div>
+          </div>
+          <div class="f-group">
+            <label>Tipo de gestión</label>
+            <select>
+              <option value="">Seleccione...</option>
+              <option>Compraventa inmobiliaria</option>
+              <option>Testamento</option>
+              <option>Herencia / Sucesión</option>
+              <option>Poder notarial</option>
+              <option>Constitución de sociedad</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label>Comentarios (opcional)</label>
+            <textarea placeholder="Cualquier información adicional que quiera facilitarnos..."></textarea>
+          </div>
+          <button type="submit" class="btn-form">Solicitar cita</button>
+          <p class="form-legal">Sus datos serán tratados con total confidencialidad conforme al RGPD. No serán cedidos a terceros.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      © 2026 Notaría Retiro Madrid<br>Todos los derechos reservados.
+    </div>
+    <div class="footer-center">
+      <div class="footer-brand">
+        Notaría Retiro
+        <small>Alfonso XII, 4 · 28014 Madrid</small>
+      </div>
+      <span class="footer-sienna"></span>
+      <div style="color:rgba(255,255,255,0.3);font-size:0.75rem">
+        <a href="tel:+34915751678" style="color:rgba(255,255,255,0.5);text-decoration:none">915 75 16 78</a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#trust">El Despacho</a>
+        <a href="#cita">Cita previa</a>
+        <a href="https://www.notariaretiro.com" target="_blank">Web oficial</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
